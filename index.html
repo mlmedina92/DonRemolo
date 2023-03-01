@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -9,14 +9,232 @@
         content="Disfruta de las pizzas más deliciosas y sabrosas en nuestra tienda en línea. Tenemos una gran variedad de ingredientes frescos y una masa crujiente que te harán agua la boca. ¡Haz tu pedido ahora y saborea la perfección en cada bocado!" />
     <meta name="keywords"
         content="pizza, comida rápida, entrega a domicilio, ingredientes frescos, masa crujiente, queso derretido, sabores italianos, menú variado, promociones, descuentos" />
-
-
-
-
     <title>Don Remolo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+
 </head>
 
 <body>
+    <header id="header" class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="text-reset" href="./" class="navbar-brand" title="Logo Don Remolo">
+                    <img src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677686496/don%20remolo/logo_mdhwso.jpg"
+                        alt="Logo Don Remolo" class="img-fluid" loading="lazy" height="80" width="100" /></a>
+
+                <!-- Menú mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links menú pcipal -->
+                <div class="navbar-collapse justify-content-end collapse" id="navbarToggler">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="text-reset nav-link" href="./">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-reset nav-link" href="./#products">Menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-reset nav-link" href="./#our">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-reset nav-link" href="./#contact">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>|
+    <!-- seccion inicio -->
+    <section class="inicio" id="inicio">
+        <h1 class="text-center">don remolo</h1>
+    </section>
+
+    <!-- seccion productos -->
+    <section class="products d-flex flex-column align-items-center justify-content-center" id="products">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <p class="title-products">Menú</p>
+                </div>
+                <!-- cuadro categorias productos -->
+                <div class="col-12 col-md-8 container-products">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-3 d-flex flex-row justify-content-center">
+                                <img src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677683944/don%20remolo/porcion-de-pizza_vhah2n.png"
+                                    alt="" loading="lazy" class="img-fluid" />
+                            </div>
+                            <div class="col-12 col-md-3 d-flex flex-row justify-content-center">
+                                <img src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677683948/don%20remolo/empanada_saanmb.png"
+                                    loading="lazy" alt="" class="img-fluid" />
+                            </div>
+                            <div class="col-12 col-md-3 d-flex flex-row justify-content-center">
+                                <img src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677683977/don%20remolo/bebidas_kh7zkz.png"
+                                    loading="lazy" alt="" class="img-fluid" />
+                            </div>
+                            <div class="col-12 col-md-3 d-flex flex-row justify-content-center">
+                                <img src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677683938/don%20remolo/helado1_fj6upb.png"
+                                    alt="icon-ice-cream" class="img-fluid" loading="lazy" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card-group">
+                                <div class="card">
+                                    <img src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677685563/don%20remolo/pizza3_du4nio.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pizza Veggie</h5>
+                                        <p class="card-text"> La opción perfecta para los amantes de las verduras.
+                                            Nuestra masa crujiente está cubierta con salsa de tomate fresca,
+                                            champiñones, pimientos, cebolla y mozzarella fundida. Sabrosa, saludable y
+                                            llena de sabor.</p>
+                                        <!-- <input type="text"> -->
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677685564/don%20remolo/pizza1_mwkior.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pizza Margarita</h5>
+                                        <p class="card-text"> Una deliciosa pizza hecha con nuestra masa casera
+                                            crujiente, salsa de tomate fresca, mozzarella fundida y hojas de albahaca
+                                            fresca. Perfecta para aquellos que buscan sabores clásicos de Italia.</p>
+                                        <!-- <input type="text"> -->
+
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677685563/don%20remolo/pizza2_uaceea.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pizza Margarita</h5>
+                                        <p class="card-text">Un clásico de la pizza con nuestro toque especial. Nuestra
+                                            masa crujiente está cubierta con salsa de tomate fresca, trozos de piña
+                                            dulce, jamón y mozzarella derretida. ¡Una deliciosa combinación de sabores
+                                            dulces y salados!</p>
+                                        <!-- <input type="text"> -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- seccion nosotros -->
+
+    <section id="our" class="our d-flex flex-row align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h3>Don Remolo - Pizzería Argentina</h3>
+                    <p>Bienvenidos a Don Remolo, la pizzería más auténtica y sabrosa de Argentina. Nuestro local se
+                        encuentra en el corazón de la ciudad, rodeado de la energía y el sabor que caracterizan a Buenos
+                        Aires. Desde hace más de 30 años, hemos sido el destino preferido de los amantes de la pizza en
+                        busca de una experiencia única e inolvidable.</p>
+
+                    <p>Nuestras pizzas son hechas con los ingredientes más frescos y seleccionados cuidadosamente por
+                        nuestro equipo de expertos en cocina. La masa es amasada a mano y horneada a la perfección,
+                        logrando una textura crujiente y una base suave que se deshace en la boca.</p>
+
+                    <p>Pero en Don Remolo no solo nos enorgullece nuestra pizza, sino también el ambiente acogedor y
+                        familiar que ofrecemos a nuestros clientes. Nuestro personal es amable y siempre está dispuesto
+                        a atender cualquier necesidad que tengas, desde recomendarte una bebida refrescante hasta
+                        ajustar la intensidad de los condimentos a tu gusto.</p>
+
+                    <p>Si estás buscando una pizzería auténtica en Argentina, no dudes en visitarnos en Don Remolo.
+                        Estamos abiertos todos los días para que puedas disfrutar de una experiencia única de sabor y
+                        tradición en cada bocado.</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677691678/don%20remolo/WhatsApp_Image_2023-03-01_at_2.27.45_PM_xila1n.jpg" alt="Local de don remolo" loading="lazy" class="img-local img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section Contacto -->
+    <section id="contact">
+
+    </section>
+
+    <footer class="pt-4 px-20 py-4">
+        <div class="container">
+          <div class="row">
+            <div class="d-none d-sm-block col-12 col-md-2 col-1">
+              <a class="text-decoration-none" href="./index.html" title="Nimax piletas">
+                <img src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677686496/don%20remolo/logo_mdhwso.jpg" alt="Logo" loading="lazy" height="100" width="100">
+              </a>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+              <ul class="list-unstyled">
+                  <li class="pb-2"><a class="text-decoration-none" href="/inicio">Inicio</a></li>
+                <li class="pb-2"><a class="text-decoration-none" href="/#our">Nosotros</a></li>
+                <li class="pb-2"><a class="text-decoration-none" href="/#products>Menú</a></li>
+                <li class="pb-2"><a class="text-decoration-none" href="./#contact">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <a class="text-decoration-none" href="tel:2494594221" title="Administración"><i
+                      class="fa-solid fa-phone"></i> Llamanos</a>
+                </li>
+                <li>
+                  <a class="text-decoration-none" href="https://goo.gl/maps/EXswAuif3Q6bjLet6">
+                    <i class="fas fa-map-marker-alt"></i> Colectora Pugliese 10. Esquina Pozos<br>Tandil (7000), Buenos
+                    Aires,
+                    Arg.</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-3">
+              <p class="texto-footer">Seguinos en las redes</p>
+              <ul class="list-unstyled d-inline-flex">
+                <li class="me-3">
+                  <a class="text-decoration-none fs-5" href="https://www.youtube.com/channel/UCbtI5mxax1HJuMPHhrPr7Kg"
+                    target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </li>
+                <li class="me-3">
+                  <a class="text-decoration-none fs-5" href="https://www.facebook.com/search/top?q=nimax%20piletas"
+                    target="_blank"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="me-3">
+                  <a class="text-decoration-none fs-5" href="https://www.instagram.com/nimaxpiletas/" target="_blank"><i
+                      class="fa fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a class="text-decoration-none fs-5" target="_blank" href="mailto:lm30540@gmail.com"
+                    title="E-mail"><i class="fas fa-envelope"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+      <div class="container-fluid copyright px-2 py-3">
+        <div class="container">
+          <p class="text-center mb-0">Copyright © | Todos los derechos reservados 2023. Pizzería Don Remolo | <a href="https://www.linkedin.com/in/lis-medina
+            " target="_blank" class="text-decoration-none">Hecho por PixelPals</a></p>
+        </div>
+      </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 
 </body>
 
