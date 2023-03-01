@@ -6,16 +6,36 @@
 
 }
 
+/* header */
+header {
+    background-color: rgba(0, 122, 51);
+    color: whitesmoke;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-bottom: 1rem solid black;
+}
+
+header a:hover {
+    cursor: pointer;
+    cursor: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1677683944/don%20remolo/porcion-de-pizza_vhah2n.png'), auto;
+    color: #FFB84C !important;
+    transition: all 1s ease-in-out;
+}
+
+.logo {
+    border-radius: 50%;
+}
 
 /* inicio */
 
 
 .inicio {
-    background-color: lightgray;
+    background-color: rgba(0, 122, 51);
     height: 100vh;
     background-size: cover;
     background-position: center center;
     width: 100%;
+    z-index: 526545;
 }
 
 
@@ -25,24 +45,33 @@
     border-radius: .5rem;
 }
 
+
+
+.menu-icons:hover {
+    transform: scale(1.16);
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+    border: solid 2px rgb(234, 7, 1);
+
+}
+
 .title-products {
     font-size: 4rem;
     font-weight: bold;
-    padding-left: 6rem;
-    padding-top: 4rem;
 }
+
+/* .btn-order {
+} */
 
 .products {
     background-image: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1677682246/don%20remolo/product_xmraxl.jpg');
-    height: 100vh;
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     width: 100%;
 }
 
 /* nosotros */
 .our {
-    height: 100vh;
     line-height: 1.5rem;
     /* background-color: lightgray; */
 }
@@ -60,14 +89,109 @@ footer {
     color: white;
 }
 
-footer a
-{
+footer a {
     color: white !important;
 
 }
 
 footer a:hover {
-    color: lightgray;
-    filter: brightness(40%);
+    color: #FFB84C !important;
+    transition: all 1s ease-in-out;
 
+}
+
+.copyright-styles {
+    background-color: black;
+    color: whitesmoke;
+}
+
+.copyright-styles a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.copyright-styles a:hover {
+    text-decoration: none;
+    color: #FFB84C !important;
+    transition: all 1s ease-in-out;
+}
+
+
+
+
+/* MQ MOBILE INDEX */
+/* navbar */
+@media screen and (max-width: 800px) {
+    .navbar-collapse {
+        height: 100vh;
+        padding-top: 4rem;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+}
+
+
+@media screen and (max-width: 800px) {
+    .cart-icon {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+}
+
+
+
+
+/* main */
+@media screen and (max-width: 425px) {
+    .products {
+        background: white;
+    }
+    .menu-icons {
+        border: solid 2px black;
+        border-radius: 40%;
+        padding: 0.5rem;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .products {
+        height: 100vh;
+    }
+
+    .menu-icons {
+        border: solid 2px black;
+        border-radius: 40%;
+        padding: 1.5rem;
+    }
+
+    .square-prods {
+        border: 1px solid;
+        margin-top: 7rem;
+        border-radius: 5%;
+        padding: 1.5rem;
+    }
+
+    .our {
+        height: 100vh;
+    }
+}
+
+
+
+/* cart styles */
+.cart-icon {
+    padding-bottom: 0.5rem;
+}
+
+.contenido {
+    height: 100vh;
 }
