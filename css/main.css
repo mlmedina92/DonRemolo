@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-
 }
 
 /* header */
@@ -28,7 +27,6 @@ header a:hover {
 
 /* inicio */
 
-
 .inicio {
     background-color: rgba(0, 122, 51);
     height: 100vh;
@@ -45,8 +43,6 @@ header a:hover {
     border-radius: .5rem;
 }
 
-
-
 .menu-icons:hover {
     transform: scale(1.16);
     transition: all 1s ease-in-out;
@@ -60,8 +56,7 @@ header a:hover {
     font-weight: bold;
 }
 
-/* .btn-order {
-} */
+/* .btn-order  */
 
 .products {
     background-image: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1677682246/don%20remolo/product_xmraxl.jpg');
@@ -147,13 +142,12 @@ footer a:hover {
 }
 
 
-
-
 /* main */
 @media screen and (max-width: 425px) {
     .products {
         background: white;
     }
+
     .menu-icons {
         border: solid 2px black;
         border-radius: 40%;
@@ -192,6 +186,17 @@ footer a:hover {
     padding-bottom: 0.5rem;
 }
 
-.contenido {
-    height: 100vh;
+.shop-container{
+    padding-top: 8rem;
+}
+
+.title-shop {
+    border-bottom: 5px solid rgb(45, 131, 52);
+}
+
+/* MQ MOBILE SECTION CART */
+@media screen and (max-width: 425px) {
+    .shop-container{
+        padding-top: 4rem;
+    }
 }

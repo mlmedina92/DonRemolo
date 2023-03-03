@@ -1,0 +1,32 @@
+[
+    {
+        "name":"pizza",
+        "description": "ksjkdjjskdk",
+        "price":12,
+        "img":"https://cdn.akamai.steamstatic.com/steam/apps/2231450/header.jpg?t=1674756021" ,
+        "category": "pizzas"
+    },
+  
+    {
+        "name":"empanada",
+        "description": "ksjkdjjskdk",
+        "price":14,
+        "img":"https://unsplash.com/es/fotos/5yaQQGrkB8Y",
+        "category": "empanadas"
+    },
+    {
+        "name":"helados",
+        "description": "ksjkdjjskdk",
+        "price":14,
+        "img":"https://www.recetasnestle.com.ar/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/2cd79cb200a3e21359d49f7a2f182bc0.webp?itok=R2PjEh6A" ,
+        "category": "helados"
+    },
+    {
+        "name":"bebidas",
+        "description": "ksjkdjjskdk",
+        "price":14,
+        "img":"https://i.blogs.es/7fc543/alcohol/1366_2000.webp" ,
+        "category": "bebida"
+    }
+]
+

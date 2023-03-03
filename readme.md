@@ -15,16 +15,11 @@ Estoy muy agradecido por la oportunidad de haber participado en IDfor Ideas y de
 
 
 ## Tecnologías utilizadas
-
-
  - HTML/CSS/JavaScript
  - React
  -SASS
 
 ## Instalación
-
-
-
 
 ## Equipo de desarrollo
 
