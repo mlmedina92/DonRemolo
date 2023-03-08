@@ -62,25 +62,35 @@
     <main>
 
         <!-- seccion inicio -->
+        
         <section class="inicio" id="inicio">
-            <h1 class="text-center">Pizzería Don Remolo</h1>
-            <p>Ver menú</p>
+            <img src="./images/pizza.gif" alt="Don Remolo" class="img-fluid gif-banner h-100">
+            <div class= "conteiner-black">
+                <h1 class="text-center">Pizzería</h1>
+                <h2>Don Remolo</h2>
+                <p>Ver menú</p>
+            </div>
+
+
+
+            <div class="capa"></div>
         </section>
 
 
 
         <!-- seccion productos -->
-        <section on class="products" id="products">
+        <section class="products" id="products">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-4" style="background-color: grey;">
                         <p class="title-products">Menú</p>
                     </div>
 
-                    <div class="col-12 col-md-8">
-                        <!-- iconos -->
+                    <div class="col-12 col-md-8" style="background-color: red">
                         <div class="container square-prods">
-                            <div class="row">
+
+                            <!-- iconos -->
+                            <div class="row" style="background-color: blue">
                                 <div class="col-3" id="pizzas">
                                     <img src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677683944/don%20remolo/porcion-de-pizza_vhah2n.png"
                                         alt="" loading="lazy" class="img-fluid menu-icons" />
@@ -98,10 +108,13 @@
                                         alt="icon-ice-cream" class="img-fluid menu-icons" loading="lazy" />
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="card-group row row-cols-2 row-cols-md-3" id="card">
 
-                                    <!-- Se crean las cards dinamicamente -->
+                            <div class="row d-flex pt-5" style="background-color: rgb(255, 200, 0)">
+                                <div class="col-12">
+                                    <div class="card-group" id="menu-products">
+                                        <!-- Se crean las cards dinamicamente -->
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

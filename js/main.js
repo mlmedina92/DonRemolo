@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
 const url = '../data/pizza.json';
 
 //trae los prods 
-function loadData() { 
+function loadData() {
     fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -55,32 +55,22 @@ function filtrarProds(arr) {
 //funcion que crea las cards dinamicamente
 function renderizarProds(arr) {
     arr.forEach(product => {
-        const card = document.getElementById('card');
+        const card = document.getElementById('menu-products');
+
         card.innerHTML += `
-        <div class="card">
-            <img src="${product.img}" alt="${product.name}" height="" width="">
-            <div class="card-body container">
-                <div class="row">
+            <div class="card">
+                <img src="${product.img}" alt="${product.name}" class="card-img-top img-fluid">
+                <div class="card-body">
                     <h5 class="card-title text-center fw-bold">${product.name}</h5>
                     <p class="card-text"> ${product.description}<p>:$${product.price}</p>
-                    <label class="form-label fw-bold" for="cantidad-p1">Cantidad:</label>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-5 p-0">
-                            <input class="form-control" type="number" id="cantidad-p1" name="quantity" min="1" max="100"
-                                oninput="validity.valid||(value='');" value="1">
-                        </div>
-                        <div class="col-7">
-                            <button type="button" class="btn btn-danger text-uppercase">Comprar</button>
-                        </div>
-                    </div>
+                    
+                    <button type="button" class="btn btn-danger text-uppercase">Comprar</button>
                 </div>
             </div>
-        </div>
+
         `;
 
-        mainCards.append(card);
+        // mainCards.append(card);
 
     });
 }
@@ -90,3 +80,6 @@ function renderizarProds(arr) {
 
 
 
+// <label class="form-label fw-bold" for="cantidad-p1">Cantidad:</label>
+//                             <input class="form-control" type="number" id="cantidad-p1" name="quantity" min="1" max="100"
+//                                 oninput="validity.valid||(value='');" value="1"></input>

@@ -28,14 +28,29 @@ header a:hover {
 /* inicio */
 
 .inicio {
-    background-color: rgba(0, 122, 51);
+    background-color: rgb(227, 0, 0);
+    position: relative;
+    color: white;
     height: 100vh;
     background-size: cover;
     background-position: center center;
     width: 100%;
-    z-index: 526545;
+    z-index: 1;
 }
 
+.gif-banner {
+    left: 7%;
+    position: absolute;
+    z-index: 2;
+}
+
+.conteiner-black {
+    background-color: black;
+    width: 15rem;
+    height: 15rem;
+    z-index: 5;
+    color: whitesmoke;
+}
 
 /* menu */
 .container-products {
@@ -186,7 +201,7 @@ footer a:hover {
     padding-bottom: 0.5rem;
 }
 
-.shop-container{
+.shop-container {
     padding-top: 8rem;
 }
 
@@ -196,7 +211,7 @@ footer a:hover {
 
 /* MQ MOBILE SECTION CART */
 @media screen and (max-width: 425px) {
-    .shop-container{
+    .shop-container {
         padding-top: 4rem;
     }
 }
