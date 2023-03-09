@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
     loadData();
 });
 
+let productos = []
 
 // Cargar el JSON
 const url = '../data/pizza.json';
@@ -28,7 +29,8 @@ function loadData() {
         })
         .then(data => {
             // procesar los datos de la respuesta
-            filtrarProds(data); //Llama a filtrarProds con la data del json
+            productos = data;
+            filtrarProds(); //Llama a filtrarProds con la data del json
         })
         .catch(error => {
             // manejar errores
@@ -37,17 +39,17 @@ function loadData() {
 }
 
 //Funcion para filtrar los prds por categoría
-function filtrarProds(arr) {
-    let mostrarPizzas = arr.filter((product) => {
+function filtrarProds() {
+    let mostrarPizzas = productos.filter((product) => {
         return product.category === 'pizzas';
     })
-    let mostrarEmpanadas = arr.filter((product) => {
+    let mostrarEmpanadas = productos.filter((product) => {
         return product.category === 'empanadas';
     })
-    let mostrarHelados = arr.filter((product) => {
+    let mostrarHelados = productos.filter((product) => {
         return product.category === 'helados';
     })
-    let mostrarBebidas = arr.filter((product) => {
+    let mostrarBebidas = productos.filter((product) => {
         return product.category === 'bebidas';
     })
 
@@ -82,7 +84,7 @@ function renderizarProds(arr) {
                 <img src="${product.img}" alt="${product.name}" class="card-img-top img-fluid">
                 <div class="card-body">
                     <h5 class="card-title text-center fw-bold">${product.name}</h5>
-                    <button onclick="mostrarCarrito(${product.id})" type="button" class="btn btn-danger text-uppercase id=btnComprar-${product.id}">Comprar</button>
+                    <button onclick="agregarCarrito(${product.id})" type="button" class="btn btn-danger text-uppercase id=btnComprar-${product.id}">Comprar</button>
                 </div>
             </div>
         `;
@@ -96,15 +98,16 @@ function limpiarHtml() {
 }
 
 // funcionalidad carrito
-const pedido = document.getElementById('pedido')
-
-
+const pedido = document.getElementById('pedido')//modal body carrito
 
 let carrito = []
 
-function mostrarCarrito(id) {
-
-producto[id]
+function agregarCarrito(id) {
+    let producto = productos.find((product) => {
+        return product.id == id;
+        
+    })
+console.log(carrito.push(producto))
 
 }
 
