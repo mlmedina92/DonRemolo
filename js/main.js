@@ -7,7 +7,6 @@ const iconEmpanadas = document.getElementById('empanadas');
 const iconBebidas = document.getElementById('beverages');
 const iconHelados = document.getElementById('iceCreams');
 
-
 //Cdo el contenido de la pag este cargado se ejecuta la funcion loadData 
 window.addEventListener('DOMContentLoaded', () => {
     loadData();
@@ -102,29 +101,76 @@ const pedido = document.getElementById('pedido')//modal body carrito
 
 let carrito = []
 
-function agregarCarrito(id) {
-    let producto = productos.find((product) => {
-        return product.id == id;
-        
-    })
-console.log(carrito.push(producto))
 
+// btn comprar
+function agregarCarrito(id) {
+    let producto = productos.find((product) => {//productos es la data que viene de JSON
+        return product.id == id; // agrega el prod que tiene el id que viene por param
+    })
+
+    let found = carrito.find((elemento) => elemento.id == id);//recorre el carrito y devuelve el primer elem que concide con la condicion
+
+    if (found) { // si ya existe el prod en el carrito
+        alert('ya agregaste ese producto a carrito')
+    } else {
+        carrito.push(producto)// sin no existe el prod en el carrito, lo agrega y crea la card 
+        renderizarCarrito()
+    }
 }
 
-// btnComprar = getElementById()
+function renderizarCarrito() {
+    pedido.innerHTML = "";
+    carrito.forEach(product => {
+        pedido.innerHTML += `
+            <div class="card">
+                <img src="${product.img}" alt="${product.name}" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title text-center fw-bold">${product.name}</h5>
+                    <p>Precio:$${product.price}</p>
+                    <label class="form-label" for="${product.id}">Cant.</label>
+                    <input class="form-control" id="qty-${product.id}" type="number" name="quantity" min="1" max="30" oninput="validity.valid||(value='');" value="1">
+                    <button onclick="borrarProd(${product.id})" type="button" class="btn btn-success text-uppercase id="borrar-${product.id}">Eliminar producto</button>
+
+                    <button onclick="calcSub(${product.id},${product.price})" type="button" class="btn btn-danger text-uppercase id=actualizarCantidad-${product.id}">Confirmar cantidad</button>
+                    <p id="sub-${product.id}">Subtotal</p>
+                </div>
+            </div>
+        `;
+        calcSub(product.id, product.price);
+    });
+}
 
 
-//capturar el btn comprar del menu con la inf de c/ producto
+function calcSub(id, price) {
+    // selectores
+    let cantidad = document.getElementById(`qty-${id}`)
+    let sub = document.getElementById(`sub-${id}`)
 
-//Funcion agregarAlCarrito : La inf de cada prod la enviamos al modal ,renderizamos las cards dentro del carrito y a c/u le agregamos un input para escoger la cant de c/ prod.
+    let producto = productos.find((product) => {//productos es la data que viene de JSON
+        return product.id == id; // agrega el prod que tiene el id que viene por param
+    })
+    let found = producto.price;
+    const subTotal = parseInt(cantidad.value) * found
 
-//Crear un btn que elimine el producto seleccionado
+    sub.innerHTML = `Subtotal:$ ${subTotal}`
+}
 
-//Crear funcion que multiplique precio por cant del prod (subtototal)
+function borrarProd(id) {
+    carrito = carrito.filter((product) => { //reasigna el valor de carrito 
+        return product.id != id;
+    })
+    renderizarCarrito()
+}
 
-//Crear funcionn que calcule el total de la compra
+function vaciarCarrito() {
+    pedido.innerHTML = ""
+    carrito = [];
+}
 
-//Crear btn que vacie el carrito totalmente
+//ver tema cantidades 
+
+//Crear funcion que calcule el total de la compra
+
 
 
 

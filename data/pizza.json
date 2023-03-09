@@ -2,99 +2,99 @@
     {
         "name":"pizza a",
         "description": "ksjkdjjskdkjdfijgidjgidjfg fkdjgjkdfjgjfd jfkdjgfkdjgkj jfdkjgkjd kfjkjfg",
-        "price":"12",
+        "price":1,
         "img":"https://cdn.akamai.steamstatic.com/steam/apps/2231450/header.jpg?t=1674756021" ,
         "category": "pizzas",
-        "id":"1"
+        "id":1
     },
     {
         "name":"pizza b ",
         "description": "ksjkdjjskdkjdfijgidjgidjfg fkdjgjkdfjgjfd jfkdjgfkdjgkj jfdkjgkjd kfjkjfg",
-        "price":"12",
+        "price":2,
         "img":"https://cdn.akamai.steamstatic.com/steam/apps/2231450/header.jpg?t=1674756021" ,
         "category": "pizzas",
-        "id":"2"
+        "id":2
     },
     {
         "name":"pizza c",
         "description": "ksjkdjjskdkjdfijgidjgidjfg fkdjgjkdfjgjfd jfkdjgfkdjgkj jfdkjgkjd kfjkjfg",
-        "price":"12",
+        "price":3,
         "img":"https://cdn.akamai.steamstatic.com/steam/apps/2231450/header.jpg?t=1674756021" ,
         "category": "pizzas",
-        "id":"3"
+        "id":3
     },
   
     {
         "name":"empanada a ",
         "description": "ksjkdjjskdkjdfijgidjgidjfg fkdjgjkdfjgjfd jfkdjgfkdjgkj jfdkjgkjd kfjkjfg",
-        "price":"14",
+        "price":14,
         "img":"https://cdn.akamai.steamstatic.com/steam/apps/2231450/header.jpg?t=1674756021" ,
         "category": "empanadas",
-        "id":"4"
+        "id":4
     },
     {
         "name":"empanada b",
         "description": "ksjkdjjskdkjdfijgidjgidjfg fkdjgjkdfjgjfd jfkdjgfkdjgkj jfdkjgkjd kfjkjfg",
-        "price":"14",
+        "price":15,
         "img":"https://cdn.akamai.steamstatic.com/steam/apps/2231450/header.jpg?t=1674756021" ,
         "category": "empanadas",
-        "id":"5"
+        "id":5
     },
     {
         "name":"empanada c",
         "description": "ksjkdjjskdkjdfijgidjgidjfg fkdjgjkdfjgjfd jfkdjgfkdjgkj jfdkjgkjd kfjkjfg",
-        "price":"14",
+        "price":16,
         "img":"https://cdn.akamai.steamstatic.com/steam/apps/2231450/header.jpg?t=1674756021" ,
         "category": "empanadas",
-        "id":"6"
+        "id":6
     },
     {
         "name":"helados",
         "description": "ksjkdjjskdkjdfijgidjgidjfg fkdjgjkdfjgjfd jfkdjgfkdjgkj jfdkjgkjd kfjkjfg",
-        "price":"14",
+        "price":17,
         "img":"https://www.recetasnestle.com.ar/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/2cd79cb200a3e21359d49f7a2f182bc0.webp?itok=R2PjEh6A" ,
         "category": "helados",
-        "id":"7"
+        "id":7
     },
     {
         "name":"helados",
         "description": "ksjkdjjskdkjdfijgidjgidjfg fkdjgjkdfjgjfd jfkdjgfkdjgkj jfdkjgkjd kfjkjfg",
-        "price":"14",
+        "price":18,
         "img":"https://www.recetasnestle.com.ar/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/2cd79cb200a3e21359d49f7a2f182bc0.webp?itok=R2PjEh6A" ,
         "category": "helados",
-        "id":"8"
+        "id":8
     },
     {
         "name":"helados",
         "description": "ksjkdjjskdkjdfijgidjgidjfg fkdjgjkdfjgjfd jfkdjgfkdjgkj jfdkjgkjd kfjkjfg",
-        "price":"14",
+        "price":14,
         "img":"https://www.recetasnestle.com.ar/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/2cd79cb200a3e21359d49f7a2f182bc0.webp?itok=R2PjEh6A" ,
         "category": "helados",
-        "id":"9"
+        "id":9
     },
     {
         "name":"bebidas",
         "description": "ksjkdjjskdkjdfijgidjgidjfg fkdjgjkdfjgjfd jfkdjgfkdjgkj jfdkjgkjd kfjkjfg",
-        "price":"14",
+        "price":19,
         "img":"https://i.blogs.es/7fc543/alcohol/1366_2000.webp" ,
         "category": "bebidas",
-        "id":"10"
+        "id":10
     },
     {
         "name":"bebidas",
         "description": "ksjkdjjskdkjdfijgidjgidjfg fkdjgjkdfjgjfd jfkdjgfkdjgkj jfdkjgkjd kfjkjfg",
-        "price":"14",
+        "price":20,
         "img":"https://i.blogs.es/7fc543/alcohol/1366_2000.webp" ,
         "category": "bebidas",
-        "id":"11"
+        "id":11
     },
     {
         "name":"bebidas",
         "description": "ksjkdjjskdkjdfijgidjgidjfg fkdjgjkdfjgjfd jfkdjgfkdjgkj jfdkjgkjd kfjkjfg",
-        "price":"14",
+        "price":21,
         "img":"https://i.blogs.es/7fc543/alcohol/1366_2000.webp" ,
         "category": "bebidas",
-        "id":"12"
+        "id":12
     }
 ]
 
