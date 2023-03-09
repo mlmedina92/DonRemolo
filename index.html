@@ -46,26 +46,55 @@
                         <li class="nav-item">
                             <a class="text-reset nav-link" href="./#contact">Contacto</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="text-reset nav-link" href="./cart.html">
+                            <button type="button" class="btn btn-cart px-0 ps-lg-2" data-bs-toggle="modal"
+                                data-bs-target="#carrito">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
                                     class="bi bi-cart cart-icon" viewBox="0 0 16 16">
                                     <path
                                         d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                                </svg></a>
+                                </svg>
+                                <span id="contadorCarrito"></span><span class="d-lg-none">
+                                    PRESUPUESTO</span>
+                            </button>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- modal cart -->
+    <!-- Modal del carrito -->
+    <div class="modal right fade" id="carrito" tabindex="-1" role="dialog" aria-labelledby="carrito">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="carrito2">Presupuesto</h4>
+                    <button type="button" class="btn btn-link btn-sm btn-clear" id="btn-clear"
+                        aria-label="Vaciar">Vaciar</button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="pedido">
+                        <!-- El Contenido del carrito se carga por JS -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btn-finalizar" class="closed btn btn-primary">FINALIZAR COMPRA</button>
+                </div>
+            </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
     <main>
 
         <!-- seccion inicio -->
-        
+
         <section class="inicio" id="inicio">
             <img src="./images/pizza.gif" alt="Don Remolo" class="img-fluid gif-banner h-100">
-            <div class= "conteiner-black">
+            <div class="conteiner-black">
                 <h1 class="text-center">Pizzería</h1>
                 <h2>Don Remolo</h2>
                 <p>Ver menú</p>
@@ -82,15 +111,15 @@
         <section class="products" id="products">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-4" style="background-color: grey;">
+                    <div class="col-12 text-center mb-1">
                         <p class="title-products">Menú</p>
                     </div>
 
-                    <div class="col-12 col-md-8" style="background-color: red">
+                    <div class="col-12 col-md-12">
                         <div class="container square-prods">
 
                             <!-- iconos -->
-                            <div class="row" style="background-color: blue">
+                            <div class="row icon-div">
                                 <div class="col-3" id="pizzas">
                                     <img src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677683944/don%20remolo/porcion-de-pizza_vhah2n.png"
                                         alt="" loading="lazy" class="img-fluid menu-icons" />
@@ -109,9 +138,9 @@
                                 </div>
                             </div>
 
-                            <div class="row d-flex pt-5" style="background-color: rgb(255, 200, 0)">
+                            <div class="row d-flex pt-5">
                                 <div class="col-12">
-                                    <div class="card-group" id="menu-products">
+                                    <div class="card-group gap-2" id="menu-products">
                                         <!-- Se crean las cards dinamicamente -->
                                     </div>
 

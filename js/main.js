@@ -1,5 +1,7 @@
+// Products menu
+
 // selectors
-const mainCards = document.getElementById('products');
+const mainCards = document.getElementById('menu-products');
 const iconPizza = document.getElementById('pizzas');
 const iconEmpanadas = document.getElementById('empanadas');
 const iconBebidas = document.getElementById('beverages');
@@ -37,19 +39,37 @@ function loadData() {
 //Funcion para filtrar los prds por categoría
 function filtrarProds(arr) {
     let mostrarPizzas = arr.filter((product) => {
-        product.category === 'pizzas';
+        return product.category === 'pizzas';
     })
     let mostrarEmpanadas = arr.filter((product) => {
-        product.category === 'empandas';
+        return product.category === 'empanadas';
     })
     let mostrarHelados = arr.filter((product) => {
-        product.category === 'helados';
+        return product.category === 'helados';
     })
     let mostrarBebidas = arr.filter((product) => {
-        product.category === 'bebidas';
+        return product.category === 'bebidas';
     })
-    let mostrarTodos = arr;
-    renderizarProds(mostrarTodos);
+
+    renderizarProds(mostrarPizzas);//renderizado por default
+
+    iconBebidas.addEventListener('click', () => {
+        limpiarHtml();
+        renderizarProds(mostrarBebidas);
+
+    });
+    iconPizza.addEventListener('click', () => {
+        limpiarHtml();
+        renderizarProds(mostrarPizzas);
+    });
+    iconEmpanadas.addEventListener('click', () => {
+        limpiarHtml();
+        renderizarProds(mostrarEmpanadas);
+    });
+    iconHelados.addEventListener('click', () => {
+        limpiarHtml();
+        renderizarProds(mostrarHelados);
+    });
 }
 
 //funcion que crea las cards dinamicamente
@@ -62,24 +82,48 @@ function renderizarProds(arr) {
                 <img src="${product.img}" alt="${product.name}" class="card-img-top img-fluid">
                 <div class="card-body">
                     <h5 class="card-title text-center fw-bold">${product.name}</h5>
-                    <p class="card-text"> ${product.description}<p>:$${product.price}</p>
-                    
-                    <button type="button" class="btn btn-danger text-uppercase">Comprar</button>
+                    <button onclick="mostrarCarrito(${product.id})" type="button" class="btn btn-danger text-uppercase id=btnComprar-${product.id}">Comprar</button>
                 </div>
             </div>
-
         `;
-
-        // mainCards.append(card);
-
     });
 }
 
+function limpiarHtml() {
+    while (mainCards.firstChild) {
+        mainCards.removeChild(mainCards.firstChild)
+    }
+}
+
+// funcionalidad carrito
+const pedido = document.getElementById('pedido')
+
+
+
+let carrito = []
+
+function mostrarCarrito(id) {
+
+producto[id]
+
+}
+
+// btnComprar = getElementById()
+
+
+//capturar el btn comprar del menu con la inf de c/ producto
+
+//Funcion agregarAlCarrito : La inf de cada prod la enviamos al modal ,renderizamos las cards dentro del carrito y a c/u le agregamos un input para escoger la cant de c/ prod.
+
+//Crear un btn que elimine el producto seleccionado
+
+//Crear funcion que multiplique precio por cant del prod (subtototal)
+
+//Crear funcionn que calcule el total de la compra
+
+//Crear btn que vacie el carrito totalmente
 
 
 
 
 
-// <label class="form-label fw-bold" for="cantidad-p1">Cantidad:</label>
-//                             <input class="form-control" type="number" id="cantidad-p1" name="quantity" min="1" max="100"
-//                                 oninput="validity.valid||(value='');" value="1"></input>
