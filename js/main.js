@@ -115,6 +115,8 @@ function agregarCarrito(id) {
     } else {
         carrito.push(producto)// sin no existe el prod en el carrito, lo agrega y crea la card 
         renderizarCarrito()
+        alert('Producto agregado con éxito')
+
     }
 }
 
@@ -160,11 +162,14 @@ function borrarProd(id) {
         return product.id != id;
     })
     renderizarCarrito()
+    alert('Producto borrado con éxito')
 }
 
 function vaciarCarrito() {
     pedido.innerHTML = ""
     carrito = [];
+    alert('Carrito vaciado con éxito')
+
 }
 
 //ver tema cantidades 

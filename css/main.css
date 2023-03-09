@@ -11,7 +11,6 @@ header {
     color: whitesmoke;
     font-size: 1.5rem;
     text-transform: uppercase;
-    border-bottom: 1rem solid black;
 }
 
 header a:hover {
@@ -121,6 +120,10 @@ header a:hover {
 /* .btn-order  */
 .products {
     width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 
@@ -208,25 +211,27 @@ footer a:hover {
     .products {
         height: 100vh;
     }
+
     .menu-icons {
         border: solid 2px black;
         border-radius: 40%;
         padding: 1.5rem;
     }
+
     .square-prods {
         border: 1px solid;
         border-radius: 5%;
         padding: 1.5rem;
     }
+
     .icon-div {
         margin-left: 5rem;
     }
+
     .our {
         height: 100vh;
     }
 }
-
-
 
 /* cart styles */
 .cart-icon {
