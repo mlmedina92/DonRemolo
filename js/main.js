@@ -1,3 +1,5 @@
+
+
 // Products menu
 
 // selectors
@@ -11,6 +13,7 @@ const iconHelados = document.getElementById('iceCreams');
 window.addEventListener('DOMContentLoaded', () => {
     loadData();
 });
+
 
 let productos = []
 
@@ -28,8 +31,10 @@ function loadData() {
         })
         .then(data => {
             // procesar los datos de la respuesta
-            productos = data;
-            filtrarProds(); //Llama a filtrarProds con la data del json
+            localStorage.setItem("productos", JSON.stringify(data))
+            productos = data; //el json en objetos
+            
+            filtrarProds(productos); //Llama a filtrarProds con la data del json
         })
         .catch(error => {
             // manejar errores
@@ -38,22 +43,22 @@ function loadData() {
 }
 
 //Funcion para filtrar los prds por categoría
-function filtrarProds() {
+function filtrarProds(productos) {
     let mostrarPizzas = productos.filter((product) => {
-        return product.category === 'pizzas';
+        return product.category == 'pizzas';
     })
     let mostrarEmpanadas = productos.filter((product) => {
-        return product.category === 'empanadas';
+        return product.category == 'empanadas';
     })
     let mostrarHelados = productos.filter((product) => {
-        return product.category === 'helados';
+        return product.category == 'helados';
     })
     let mostrarBebidas = productos.filter((product) => {
-        return product.category === 'bebidas';
+        return product.category == 'bebidas';
     })
 
     renderizarProds(mostrarPizzas);//renderizado por default
-
+    
     iconBebidas.addEventListener('click', () => {
         limpiarHtml();
         renderizarProds(mostrarBebidas);
@@ -113,9 +118,12 @@ function agregarCarrito(id) {
     if (found) { // si ya existe el prod en el carrito
         alert('ya agregaste ese producto a carrito')
     } else {
+        
         carrito.push(producto)// sin no existe el prod en el carrito, lo agrega y crea la card 
+        // localStorage.setItem("pedido", JSON.stringify(carrito));
+      
+        localStorage.setItem("producto",JSON.stringify(producto))
         renderizarCarrito()
-        alert('Producto agregado con éxito')
 
     }
 }
