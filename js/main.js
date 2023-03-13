@@ -8,11 +8,16 @@ const iconPizza = document.getElementById('pizzas');
 const iconEmpanadas = document.getElementById('empanadas');
 const iconBebidas = document.getElementById('beverages');
 const iconHelados = document.getElementById('iceCreams');
+let contadorCarrito = document.getElementById('contadorCarrito')
+let amount;
 
 //Cdo el contenido de la pag este cargado se ejecuta la funcion loadData 
 window.addEventListener('DOMContentLoaded', () => {
     loadData();
 });
+
+
+    
 
 
 let productos = []
@@ -30,10 +35,8 @@ function loadData() {
             return response.json();
         })
         .then(data => {
-            // procesar los datos de la respuesta
-            localStorage.setItem("productos", JSON.stringify(data))
             productos = data; //el json en objetos
-            
+
             filtrarProds(productos); //Llama a filtrarProds con la data del json
         })
         .catch(error => {
@@ -58,7 +61,7 @@ function filtrarProds(productos) {
     })
 
     renderizarProds(mostrarPizzas);//renderizado por default
-    
+
     iconBebidas.addEventListener('click', () => {
         limpiarHtml();
         renderizarProds(mostrarBebidas);
@@ -118,16 +121,14 @@ function agregarCarrito(id) {
     if (found) { // si ya existe el prod en el carrito
         alert('ya agregaste ese producto a carrito')
     } else {
-        
         carrito.push(producto)// sin no existe el prod en el carrito, lo agrega y crea la card 
-        // localStorage.setItem("pedido", JSON.stringify(carrito));
-      
-        localStorage.setItem("producto",JSON.stringify(producto))
+        localStorage.setItem("producto", JSON.stringify(carrito))//lo guardamos en el local
         renderizarCarrito()
+        setearContadorCart()
 
     }
 }
-
+let inputValidation = localStorage.getItem("producto")
 function renderizarCarrito() {
     pedido.innerHTML = "";
     carrito.forEach(product => {
@@ -140,7 +141,6 @@ function renderizarCarrito() {
                     <label class="form-label" for="${product.id}">Cant.</label>
                     <input class="form-control" id="qty-${product.id}" type="number" name="quantity" min="1" max="30" oninput="validity.valid||(value='');" value="1">
                     <button onclick="borrarProd(${product.id})" type="button" class="btn btn-success text-uppercase id="borrar-${product.id}">Eliminar producto</button>
-
                     <button onclick="calcSub(${product.id},${product.price})" type="button" class="btn btn-danger text-uppercase id=actualizarCantidad-${product.id}">Confirmar cantidad</button>
                     <p id="sub-${product.id}">Subtotal</p>
                 </div>
@@ -151,16 +151,26 @@ function renderizarCarrito() {
 }
 
 
-function calcSub(id, price) {
+function calcSub(id) {
     // selectores
     let cantidad = document.getElementById(`qty-${id}`)
+
     let sub = document.getElementById(`sub-${id}`)
 
     let producto = productos.find((product) => {//productos es la data que viene de JSON
         return product.id == id; // agrega el prod que tiene el id que viene por param
     })
-    let found = producto.price;
-    const subTotal = parseInt(cantidad.value) * found
+    let found = producto.price;  //$1
+    
+    
+   let count = localStorage.setItem("cantidad",parseInt(cantidad.value));
+
+   
+
+
+    // amountJSON = JSON.parse(localStorage.setItem("cantidad", amount))
+
+    const subTotal = localStorage.getItem("cantidad", (parseInt(count)) * found);
 
     sub.innerHTML = `Subtotal:$ ${subTotal}`
 }
@@ -169,16 +179,26 @@ function borrarProd(id) {
     carrito = carrito.filter((product) => { //reasigna el valor de carrito 
         return product.id != id;
     })
+    localStorage.setItem("producto", carrito)
     renderizarCarrito()
     alert('Producto borrado con éxito')
+    setearContadorCart()
+
 }
 
 function vaciarCarrito() {
     pedido.innerHTML = ""
     carrito = [];
+    localStorage.setItem("producto", carrito)
     alert('Carrito vaciado con éxito')
+    setearContadorCart()
 
 }
+
+setearContadorCart(()=>{
+    contadorCarrito.insertAdjacentHTML= `${carrito.lenght >= 1 ? carrito.lenght : 0}`
+
+});
 
 //ver tema cantidades 
 
