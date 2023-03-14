@@ -136,9 +136,8 @@ function renderizarCarrito() {
                 <div class="card-body">
                     <h5 class="card-title text-center fw-bold">${product.name}</h5>
                     <p>Precio:$${product.price}</p>
-                    <p>Cantidad: ${product.quantity}</p>
                     <label class="form-label" for="${product.id}">Cant.</label>
-                    <input class="form-control" id="qty-${product.id}" type="number" name="quantity" min="1" max="30" oninput="validity.valid||(value='');" value="1">
+                    <input class="form-control" id="qty-${product.id}" type="number" name="quantity" min="1" max="30" oninput="validity.valid||(value='');" value="${product.quantity}">
                     <button onclick="borrarProd(${product.id})" type="button" class="btn btn-success text-uppercase id="borrar-${product.id}">Eliminar producto</button>
 
                     <button onclick="sumQuantity(${product.id})" type="button" class="btn btn-danger text-uppercase id=actualizarCantidad-${product.id}">Confirmar cantidad</button>
@@ -169,6 +168,7 @@ function sumQuantity(id) {
     producto.quantity += Number(cantidad.value)
 
     sub.innerHTML = `Subtotal:$ ${producto.quantity * producto.price}`
+    renderizarCarrito()
 }
 
 function borrarProd(id) {
