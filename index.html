@@ -18,7 +18,8 @@
 </head>
 
 <body>
-    <header id="header" class="fixed-top">
+
+    <header id="header" class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <!-- Logo -->
@@ -26,13 +27,13 @@
                     <img src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677686496/don%20remolo/logo_mdhwso.jpg"
                         alt="Logo Don Remolo" class="img-fluid logo" loading="lazy" height="80" width="100" /></a>
 
-                <!-- Menú mobile -->
+                <!-- Menú -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
                     aria-controls="navbarToggler" aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- Links menú pcipal -->
+                <!-- Links menú principal -->
                 <div class="navbar-collapse justify-content-md-end collapse" id="navbarToggler">
                     <ul class="navbar-nav d-sm-flex">
                         <li class="nav-item">
@@ -52,13 +53,12 @@
                             <button type="button" class="btn btn-cart px-0 ps-lg-2" data-bs-toggle="modal"
                                 data-bs-target="#carrito">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                                    fill="currentColor class=" icon-cart" class="bi bi-cart cart-icon"
+                                    fill="currentColor class=" icon-cart" class="bi bi-cart cart-icon carrito-decompras"
                                     viewBox="0 0 16 16">
                                     <path
                                         d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                                 </svg>
-                                <span id="contadorCarrito"></span><span class="d-lg-none">
-                                    </span>
+                                <span id="contadorCarrito"></span>
                             </button>
                         </li>
                     </ul>
@@ -67,7 +67,6 @@
         </nav>
     </header>
 
-    <!-- modal cart -->
     <!-- Modal del carrito -->
     <div class="modal right fade" id="carrito" tabindex="-1" role="dialog" aria-labelledby="carrito">
         <div class="modal-dialog">
@@ -84,34 +83,35 @@
                     </div>
                 </div>
                 <div class="modal-footer">
+                    <p id="comprar">
+                        <!-- el total se caragra dinamicamente -->
+                    </p>
                     <button type="button" id="btn-finalizar" class="closed btn btn-danger">FINALIZAR COMPRA</button>
                 </div>
             </div><!-- modal-content -->
         </div><!-- modal-dialog -->
     </div><!-- modal -->
 
-    <main>
+     <main>
 
         <!-- seccion inicio -->
         <section class="inicio d-flex justify-content-end" id="inicio">
-            <img src="./images/PizzaGiratoria.png" alt="Don Remolo" class="img-fluid gif-banner">
-            <div class="conteiner-black bg-dark d-flex flex-column justify-content-around align-items-center ">
-                <div class="text-start text-light align-self-start ms-5 ">
-                    <h2 class="mt-4">Pizzería </h2>
-                    <h2 class="ms-5 mt-4">Don Rembolo</h2>
+            <img src="./images/PizzaGiratoria.png" alt="Don Remolo" class="img-fluid gif-banner d-sm-none d-md-block">
+            <div class="conteiner-black bg-dark d-flex flex-column justify-content-evenly align-items-center ">
+                <div class="text-start text-light align-self-end title-container">
+                    <h1 class="mt-4 ">Pizzería</h1>
+                    <h2 class="me-5 title-main">Don Remolo</h2>
                 </div>
-                <img width="150px" class="position-absolute logo-titulo"
-                    src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677686496/don%20remolo/logo_mdhwso.jpg">
                 <div class="d-flex flex-column align-items-center mb-5 ">
                     <p class="fs-4">Ver menú</p>
-                    <a href="#products"><img class="flecha" src="./images/flecha.png" alt="Don Remolo"
-                            loading="lazy"></a>
+                    <div class="icon-menu">
+                        <a href="#products"><img class="flecha" src="./images/flecha-hacia-abajo-para-navegar.png"
+                                alt="Don Remolo" loading="lazy"></a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div class="capa"></div>
-        </section>
 
         <!-- seccion productos -->
         <section class="products" id="products">
@@ -160,7 +160,6 @@
         </section>
 
         <!-- seccion nosotros -->
-
         <section id="our" class="our d-flex py-5 flex-row align-items-center justify-content-center">
             <div class="container">
                 <div class="row">
@@ -197,10 +196,6 @@
             </div>
         </section>
 
-        <!-- section Contacto -->
-        <section id="contact">
-
-        </section>
     </main>
     <footer class="pt-4 px-20 py-4">
         <div class="container">
