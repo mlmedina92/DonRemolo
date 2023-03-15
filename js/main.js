@@ -12,7 +12,7 @@ let btnFinalizar = document.getElementById(`btn-finalizar`);
 
 
 // variables globales
-let total 
+let total //$
 let cantidadTotal
 // Cargar el JSON
 const url = "./data/pizza.json";
@@ -117,17 +117,35 @@ function agregarCarrito(id) {
 
     if (found) {
         // si ya existe el prod en el carrito
-        alert("ya agregaste ese producto a carrito");
+        Toastify({
+            text: "Ya agregaste ese producto a carrito",
+            duration: 3000, 
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: 'left', // `left`, `center` or `right`
+            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            onClick: function(){} // Callback after click
+          }).showToast();
     } else {
         carrito.push({ ...producto, quantity: 1 }); // sin no existe el prod en el carrito, lo agrega y crea la card
-
         renderizarCarrito();
+        Toastify({
+            text: "Producto agregado al carrito",
+            duration: 3000, 
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: 'left', // `left`, `center` or `right`
+            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            onClick: function(){} // Callback after click
+          }).showToast();
     }
 }
 
-
 function renderizarCarrito() {
-
     total = 0
     cantidadTotal = 0
 
@@ -155,7 +173,6 @@ function renderizarCarrito() {
     divTotal.innerHTML = `
                         <p>Total:$ ${total}</p>
                         <p>Cantidad de productos: ${cantidadTotal}</p>
-
                         `
     carritoContador.innerHTML = `
                                     ${cantidadTotal}
@@ -179,23 +196,51 @@ function borrarProd(id) {
         return product.id != id;
     });
     renderizarCarrito();
-    alert("Producto borrado con éxito");
+    Toastify({
+        text: "Producto borrado con éxito",
+        duration: 3000, 
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: 'left', // `left`, `center` or `right`
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        onClick: function(){} // Callback after click
+      }).showToast();
 }
 
 function vaciarCarrito() {
     pedido.innerHTML = "";
     carrito = [];
-    alert("Carrito vaciado con éxito");
-}
+    Toastify({
+        text: "Carrito vaciado con éxito",
+        duration: 3000, 
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: 'left', // `left`, `center` or `right`
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        onClick: function(){} // Callback after click
+      }).showToast();
+    total=0;
+    cantidadTotal=0;
+    divTotal.innerHTML = `<p>Total:$ ${total}</p>
+                        <p>Cantidad de productos: ${cantidadTotal}</p>
+                        `
+    carritoContador.innerHTML = `
+                                    ${cantidadTotal}
+                                `
+    }
 
 btnFinalizar.addEventListener("click", () => {
-    let txt = `Hola Don Remolo! Me gustaría hacer un pedido de lo siguiente: \n;`
+    let txt = `Hola Don Remolo! Me gustaría hacer un pedido de lo siguiente: \n`
     carrito.forEach(function (itemPedido) {
         txt +=`*${itemPedido.name}* x ${itemPedido.quantity} unidades= $${itemPedido.price * itemPedido.quantity} \n`
     });
 
-    //  txt += `${-----------------\n}`;
-    // `  txt +=${totalWhatsapp} Total $" + total`;
+      txt += `------------------\n`
+      txt +=`Total: $${total}`;
 
     let url = "https://wa.me/2494545017?text=" + encodeURIComponent(txt); //encodeURIComponent reemplaza espacios y caracteres especiales para ser enviados por parámetro en la url.whatsapp.
     window.open(url, "_blank"); // abrir nueva pestaña con la url
