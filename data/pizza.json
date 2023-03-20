@@ -1,112 +1,111 @@
 [
-    {
-        "name":"Napolitana",
-        "description": "La pizza napolitana es una variedad de pizza originaria de Nápoles, Italia, que se caracteriza por su base delgada y crujiente, borde grueso y esponjoso, salsa de tomate fresco y mozzarella de búfala.",
-        "price":1200,
-        "img":"https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471879/don%20remolo/pizzadeNapo_uhqow4.jpg" ,
-        "category": "pizzas",
-        "id":1,
-        "cantidad":0
-    },
-    {
-        "name":"Muzzarela",
-        "description": "La mozzarella es un tipo de queso fresco de origen italiano, elaborado a partir de la leche de vaca o de búfala. Se caracteriza por su textura suave y cremosa, su sabor suave y ligeramente dulce, y su capacidad para derretirse fácilmente en platos calientes como nuestras pizzas.",
-        "price":1000,
-        "img":"https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471879/don%20remolo/pizzadeMuzza_dnmnm9.jpg" ,
-        "category": "pizzas",
-        "id":2,
-        "cantidad":0
-    },
-    {
-        "name":"Roquefort",
-        "description": "Se caracteriza por una base delgada y crujiente, cubierta con salsa de tomate y una mezcla de quesos, incluyendo el Roquefort. La combinación de sabores es intensa y deliciosa, con la salinidad del queso azul equilibrada por la dulzura de la salsa de tomate.",
-        "price":1400,
-        "img":"https://cdn.akamai.steamstatic.com/steam/apps/2231450/header.jpg?t=1674756021" ,
-        "category": "pizzas",
-        "id":3,
-        "cantidad":0
-    },
-  
-    {
-        "name":"Empanada de Carne",
-        "description": "Las empanadas de carne son un plato típico de la cocina latinoamericana, consiste encarne sazonada aumada con tomate chileno bien cocida.",
-        "price":200,
-        "img":"https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/empanadasdeCarne_orhwta.jpg" ,
-        "category": "empanadas",
-        "id":4,
-        "cantidad":0
-    },
-    {
-        "name":"Empanada de Pollo",
-        "description": "Empanadas rellenas con una mezcla de pollo cocido y desmenuzado, cebolla, ajo, pimiento y otras especias, que le dan un sabor delicioso y aromático. ",
-        "price":200,
-        "img":"https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/EmpanadasPollo_cubbmb.jpg" ,
-        "category": "empanadas",
-        "id":5,
-        "cantidad":0
-    },
-    {
-        "name":"Empanadas de Jamon y Queso",
-        "description": "Jamón cocido o jamón serrano, y el queso puede variar entre mozzarella.",
-        "price":200,
-        "img":"https://cdn.akamai.steamstatic.com/steam/apps/2231450/header.jpg?t=1674756021" ,
-        "category": "empanadas",
-        "id":6,
-        "cantidad":0
-    },
-    {
-        "name":"Bombones de helado",
-        "description": "Bola de helado de tamaño pequeño o mediano, envuelta en una capa de chocolate, que se derrite en la boca cuando se come.",
-        "price":700,
-        "img":"https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/bombones_bgrx0y.jpg" ,
-        "category": "helados",
-        "id":7,
-        "cantidad":0
-    },
-    {
-        "name":"Paleta de chocolate",
-        "description": "Consta de una barra de chocolate mas crema americana y chips de chocolate.",
-        "price":500,
-        "img":"https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/heladodeChocolate_exxuhr.jpg" ,
-        "category": "helados",
-        "id":8,
-        "cantidad":0
-    },
-    {
-        "name":"Granizado",
-        "description": "Postre frío que combina la textura suave y cremosa del helado con la textura granulada y refrescante del hielo picado.",
-        "price":1000,
-        "img":"https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/granizado_helado_nabh48.jpg" ,
-        "category": "helados",
-        "id":9,
-        "cantidad":0
-    },
-    {
-        "name":"Pepsi",
-        "description": "Pepsi de 250ml",
-        "price":220,
-        "img":"https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471879/don%20remolo/pepsi_zq8xjg.jpg" ,
-        "category": "bebidas",
-        "id":10,
-        "cantidad":0
-    },
-    {
-        "name":"Brahama",
-        "description": "Brahama 375ml",
-        "price":400,
-        "img":"https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/brahama_vjwabq.jpg" ,
-        "category": "bebidas",
-        "id":11,
-        "cantidad":0
-    },
-    {
-        "name":"Agua",
-        "description": "Botella de agua 300ml",
-        "price":240,
-        "img":"https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/Agua-nestle_mtiwdg.jpg" ,
-        "category": "bebidas",
-        "id":12,
-        "cantidad":0
-    }
-]
+  {
+    "name": "Morron",
+    "description": "La pizza napolitana es una variedad de pizza originaria de Nápoles, Italia.",
+    "price": 1200,
+    "img": "https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471879/don%20remolo/pizzadeNapo_uhqow4.jpg",
+    "category": "pizzas",
+    "id": 1,
+    "cantidad": 0
+  },
+  {
+    "name": "Muzzarela",
+    "description": "La mozzarella se caracteriza por su textura suave y cremosa, su sabor suave y ligeramente dulce.",
+    "price": 1000,
+    "img": "https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471879/don%20remolo/pizzadeMuzza_dnmnm9.jpg",
+    "category": "pizzas",
+    "id": 2,
+    "cantidad": 0
+  },
+  {
+    "name": "Napolitana",
+    "description": "Se caracteriza por una base delgada y crujiente, cubierta con salsa de tomate y una mezcla de quesos.",
+    "price": 1400,
+    "img": "https://res.cloudinary.com/dr1lboqfo/image/upload/v1679079268/napolitana_bkl00x.webp",
+    "category": "pizzas",
+    "id": 3,
+    "cantidad": 0
+  },
 
+  {
+    "name": "Empanada de Carne",
+    "description": "Las empanadas de carne son un plato típico de la cocina latinoamericana, consiste encarne sazonada aumada con tomate chileno bien cocida.",
+    "price": 200,
+    "img": "https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/empanadasdeCarne_orhwta.jpg",
+    "category": "empanadas",
+    "id": 4,
+    "cantidad": 0
+  },
+  {
+    "name": "Empanada de Pollo",
+    "description": "Empanadas rellenas con una mezcla de pollo cocido y desmenuzado, cebolla, ajo, pimiento y otras especias, que le dan un sabor delicioso y aromático. ",
+    "price": 200,
+    "img": "https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/EmpanadasPollo_cubbmb.jpg",
+    "category": "empanadas",
+    "id": 5,
+    "cantidad": 0
+  },
+  {
+    "name": "Empanadas de Jamon y Queso",
+    "description": "Jamón cocido o jamón serrano, y el queso puede variar entre mozzarella.",
+    "price": 200,
+    "img": "https://res.cloudinary.com/dr1lboqfo/image/upload/v1679082745/humita_thiwob.webp",
+    "category": "empanadas",
+    "id": 6,
+    "cantidad": 0
+  },
+  {
+    "name": "Bombones de helado",
+    "description": "Bola de helado de tamaño pequeño o mediano, envuelta en una capa de chocolate, que se derrite en la boca cuando se come.",
+    "price": 700,
+    "img": "https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/bombones_bgrx0y.jpg",
+    "category": "helados",
+    "id": 7,
+    "cantidad": 0
+  },
+  {
+    "name": "Paleta de chocolate",
+    "description": "Consta de una barra de chocolate mas crema americana y chips de chocolate.",
+    "price": 500,
+    "img": "https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/heladodeChocolate_exxuhr.jpg",
+    "category": "helados",
+    "id": 8,
+    "cantidad": 0
+  },
+  {
+    "name": "Granizado",
+    "description": "Postre frío que combina la textura suave y cremosa del helado con la textura granulada y refrescante del hielo picado.",
+    "price": 1000,
+    "img": "https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/granizado_helado_nabh48.jpg",
+    "category": "helados",
+    "id": 9,
+    "cantidad": 0
+  },
+  {
+    "name": "Pepsi",
+    "description": "Pepsi de 250ml",
+    "price": 220,
+    "img": "https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471879/don%20remolo/pepsi_zq8xjg.jpg",
+    "category": "bebidas",
+    "id": 10,
+    "cantidad": 0
+  },
+  {
+    "name": "Brahama",
+    "description": "Brahama 375ml",
+    "price": 400,
+    "img": "https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/brahama_vjwabq.jpg",
+    "category": "bebidas",
+    "id": 11,
+    "cantidad": 0
+  },
+  {
+    "name": "Agua",
+    "description": "Botella de agua 300ml",
+    "price": 240,
+    "img": "https://res.cloudinary.com/dmatgvjjy/image/upload/v1678471878/don%20remolo/Agua-nestle_mtiwdg.jpg",
+    "category": "bebidas",
+    "id": 12,
+    "cantidad": 0
+  }
+]
